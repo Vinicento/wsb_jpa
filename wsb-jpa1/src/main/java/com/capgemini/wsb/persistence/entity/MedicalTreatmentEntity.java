@@ -11,6 +11,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import javax.persistence.*;
+
 @Entity
 @Table(name = "MEDICAL_TREATMENT")
 public class MedicalTreatmentEntity {
@@ -24,6 +26,11 @@ public class MedicalTreatmentEntity {
 
 	@Enumerated(EnumType.STRING)
 	private TreatmentType type;
+
+
+	@ManyToOne
+	@JoinColumn(name = "visit_id", nullable = false)
+	private VisitEntity visit; //dwukierunkowa
 
 	public Long getId() {
 		return id;

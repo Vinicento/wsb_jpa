@@ -4,5 +4,8 @@ public enum TreatmentType {
 
 	USG,
 	EKG,
-	RTG
+	RTG,
+	DIAGNOSTIC,
+	ALLERGY_TEST,
+	DENTAL
 }
